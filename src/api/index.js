@@ -1,8 +1,8 @@
 const AuthApi = require('./authApi');
 const BookingApi = require('./bookingApi')
 
-const auth = new AuthApi(),
-      booking = new BookingApi();
+const auth = new AuthApi();
+const booking = new BookingApi();
 
 module.exports = {
   auth,

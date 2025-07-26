@@ -1,12 +1,13 @@
 const { booking, auth } = require('../api/index');
 const bookingData = require('../utils/bookingData.json');
+const { validUsername, validPassword } = require('../../envConfig');
 
 const { validBookingData } = bookingData;
 let bookingId;
 let token;
 
 beforeAll(async () => {
-  const authResponse = await auth.createToken(process.env.VALID_USERNAME, process.env.VALID_PASSWORD);
+  const authResponse = await auth.createToken(validUsername, validPassword);
 
   token = authResponse.data.token;
 });
